@@ -1,0 +1,9 @@
+<p>Hello {{username()}}</p>
+
+<button (click)="createNote()">Create Note</button>
+
+<div id="note-list">
+    @for(note of noteList(); track note.id) {
+        <p style="cursor: pointer;" (click)="editNote(note)">{{note.title}}</p>
+    }
+</div>

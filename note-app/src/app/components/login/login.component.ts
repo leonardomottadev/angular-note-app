@@ -18,7 +18,7 @@ export class LoginComponent {
   login() {
     if(this.username() === 'admin' && this.password() === 'admin') {
       localStorage.setItem('username', this.username());
-      this.router.navigate(['/note-editor']);
+      this.router.navigate(['/note-list']);
     }
     else {
       this.error.set('Invalid email or password!');

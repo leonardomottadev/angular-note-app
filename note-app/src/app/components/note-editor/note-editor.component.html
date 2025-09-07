@@ -1,1 +1,9 @@
-<p>Hello {{username()}}</p>
+<div *ngIf="note()">
+  <label>Title:</label>
+  <input type="text" [(ngModel)]="note().title" placeholder="Edit title" />
+
+  <label>Text:</label>
+  <textarea [(ngModel)]="note().text" placeholder="Edit text"></textarea>
+
+  <button (click)="saveNote()">Save</button>
+</div>
