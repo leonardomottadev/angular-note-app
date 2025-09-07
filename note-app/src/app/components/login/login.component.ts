@@ -9,14 +9,15 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  username = signal('');
-  password = signal('');
-  error = signal('');
+  username = signal<string>('');
+  password = signal<string>('');
+  error = signal<string>('');
 
   constructor(private router: Router) {}
 
   login() {
     if(this.username() === 'admin' && this.password() === 'admin') {
+      localStorage.setItem('username', this.username());
       this.router.navigate(['/note-editor']);
     }
     else {
