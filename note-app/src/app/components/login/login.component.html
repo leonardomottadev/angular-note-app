@@ -1,0 +1,19 @@
+<h1>Login</h1>
+<form (submit)="login(); $event.preventDefault();">
+    <h2>Access</h2>
+    <div>
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" [(ngModel)]="username" placeholder="Enter your Username">
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" [(ngModel)]="password"  placeholder="Enter your password">
+    </div>
+    
+    <button type="submit">Login</button>
+    <p>{{error()}}</p>
+
+    <div class="footer-text">
+        © 2025 Motta. All rights reserved.
+    </div>
+</form>
